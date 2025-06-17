@@ -13,7 +13,6 @@ import PreWorkouts from './pages/PreWorkouts';
 import WheyProteins from './pages/WheyProteins';
 import Shop from './pages/Shop';
 import BestSellers from './pages/BestSellers';
-import SearchResults from "./SearchResults";
 
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
       <Navbar />
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<SearchResults />} />
             <Route path="/" element={<Home />} />
             <Route path="/cla" element={<Cla />} />
             <Route path="/creatine" element={<Creatine />} />
