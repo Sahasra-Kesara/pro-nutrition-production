@@ -45,6 +45,9 @@ const preWorkoutProducts = [
   { id: 8, name: "MR pre rulz", price: 39.99, image: "https://res.cloudinary.com/dwf8ifbzs/image/upload/v1741412594/WhatsApp_Image_2025-03-08_at_11.12.53_AM_n5rdgc.jpg", rating: 4.7, popularity: 82 },
   { id: 9, name: "GAT Caffeine Tablets", price: 49.99, image: "https://res.cloudinary.com/dwf8ifbzs/image/upload/v1741413710/WhatsApp_Image_2025-03-08_at_11.30.56_AM_kpgyl4.jpg", rating: 4.7, popularity: 85 },
   { id: 10, name: "Applied Nutrition ABE", price: 49.99, image: "https://lk-live-21.slatic.net/kf/Sd47ef9cb9b2949a0a673c0a8bd616d0cP.jpg", rating: 4.7, popularity: 85 },
+  { id: 11, name: "Redcon - Total War", price: 49.99, image: "https://m.media-amazon.com/images/I/61mV1JdDFTL.jpg", rating: 4.7, popularity: 85 },
+  { id: 12, name: "No - Xplode Pre Workout", price: 49.99, image: "https://www.primeprotein.in/admin/upload/products/Pi7compressedBSN_no_xplode.jpeg", rating: 4.7, popularity: 85 },
+  { id: 13, name: "Reckful - The Pump", price: 49.99, image: "https://static.tildacdn.one/tild3862-3465-4631-b463-336338636136/1_pump.png", rating: 4.7, popularity: 85 },
 ];
 
 const massGainersProducts = [
