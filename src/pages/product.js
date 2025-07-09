@@ -3,10 +3,9 @@
 const creatineProducts = [
   { id: 1, name: "Gold Creatine", price: 59.99, image: "https://fitcookie.co.uk/wp-content/uploads/2022/05/gold-creatine-levrone-signature-series.jpg", rating: 4.9, popularity: 100 },
   { id: 2, name: "Scitec Nutrition - 100% Creatine Monohydrate", price: 49.99, image: "https://th.bing.com/th/id/OIP.Lnq5iHdsXvafuxMwabLp9gHaFj?rs=1&pid=ImgDetMain", rating: 4.7, popularity: 90 },
-  { id: 3, name: "ProScience - Creatine Monohydrate", price: 44.99, image: "https://cdn.shopify.com/s/files/1/0451/2838/4675/products/ProScience-Nutra-Creatine.jpg?v=1668009336", rating: 4.6, popularity: 85 },
+  { id: 3, name: "ProScience - Creatine Monohydrate", price: 44.99, image: "https://tse4.mm.bing.net/th/id/OIP.AOya5K4ZeJQ6anqymfPwyQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3", rating: 4.6, popularity: 85 },
   { id: 4, name: "Ultimate Sports Nutrition - Pure Creatine Monohydrate Powder", price: 49.99, image: "https://www.usn.co.za/cdn/shop/files/creatine.webp?v=1728289890&width=480", rating: 4.7, popularity: 88 },
   { id: 5, name: "Applied Nutrition - Creatine Monohydrate", price: 44.99, image: "https://www.beingbuilder.com/image/cache/catalog/Untitled%20design%20-%202023-06-17T191152.793-900x1200.jpg", rating: 4.6, popularity: 85 },
-
 ];
 
 const wheyProducts = [
