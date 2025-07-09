@@ -5,7 +5,6 @@ import { fatBurnerProducts } from "./product"; // Adjust the path based on your 
 const FatBurners = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOption, setSortOption] = useState("popularity");
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const filteredProducts = fatBurnerProducts
@@ -27,20 +26,18 @@ const FatBurners = () => {
 
   const openModal = (product) => {
     setSelectedProduct(product);
-    setIsModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const handleCloseModal = () => {
     setSelectedProduct(null);
   };
 
-  const contactOnWhatsApp = () => {
+  const handleWhatsAppContact = () => {
     if (!selectedProduct) return;
     const message = `Hello, I am interested in purchasing *${selectedProduct.name}*. Could you provide more details?`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+94765794062&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
-};
+  };
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
@@ -97,37 +94,38 @@ const FatBurners = () => {
       </div>
 
       {/* Modal */}
-      {isModalOpen && selectedProduct && (
-  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-start justify-start p-4">
-    <div className="bg-gray-900 p-5 rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md text-center ml-4 mt-10">
-      <img 
-        src={selectedProduct.image} 
-        alt={selectedProduct.name} 
-        className="w-full max-h-48 object-cover rounded-md mb-3" 
-      />
-      <h2 className="text-lg sm:text-xl font-bold">{selectedProduct.name}</h2>
-      {/* <p className="text-red-400 text-md sm:text-lg">${selectedProduct.price.toFixed(2)}</p> */}
-      <p className="text-gray-300 mt-2 text-sm sm:text-base">
-        ⭐ {selectedProduct.rating} | Popularity: {selectedProduct.popularity}%
-      </p>
+      {selectedProduct && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-300">
+    <div className="bg-black text-white shadow-xl p-6 max-w-lg w-full">
+      <div className="flex flex-col items-center">
+        <img
+          src={selectedProduct.image}
+          alt={selectedProduct.name}
+          className="w-full h-64 object-cover mb-4"
+        />
+        <h2 className="text-2xl font-bold text-center mb-2">{selectedProduct.name}</h2>
+        <p className="text-sm text-white text-center mb-4 px-2">{selectedProduct.description}</p>
 
-      <div className="mt-4 flex flex-col gap-3">
-        <button 
-          onClick={contactOnWhatsApp} 
-          className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white font-bold w-full"
-        >
-          Contact on WhatsApp
-        </button>
-        <button 
-          onClick={closeModal} 
-          className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white font-bold w-full"
-        >
-          Close
-        </button>
+        <div className="w-full flex flex-col gap-2">
+          <button
+            onClick={handleWhatsAppContact}
+            className="bg-red-600 hover:bg-red-700 transition text-white font-semibold py-2 px-4"
+          >
+            Contact on WhatsApp
+          </button>
+          <button
+            onClick={handleCloseModal}
+            className="bg-white hover:bg-gray-200 transition text-black font-semibold py-2 px-4"
+          >
+            Close
+          </button>
+        </div>
       </div>
     </div>
   </div>
 )}
+
+
     </div>
   );
 };

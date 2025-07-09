@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { claProducts } from "./product"; // Adjust the path based on your file structure
+import { claProducts } from "./product";
 
 const Cla = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -93,33 +93,37 @@ const Cla = () => {
       </div>
 
       {selectedProduct && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
-          <div className="bg-gray-900 p-6 rounded-lg text-white max-w-md w-full text-center">
-            <h2 className="text-2xl font-bold">{selectedProduct.name}</h2>
-            <img
-              src={selectedProduct.image}
-              alt={selectedProduct.name}
-              className="w-full h-64 object-cover my-4"
-            />
-            {/* <p className="text-lg text-red-400">Price: ${selectedProduct.price.toFixed(2)}</p> */}
-            <p className="mt-2">{selectedProduct.description}</p>
-            <div className="mt-4 flex flex-col gap-2">
-              <button
-                onClick={handleWhatsAppContact}
-                className="bg-green-600 w-full py-2 font-bold hover:bg-green-700 transition"
-              >
-                Contact on WhatsApp
-              </button>
-              <button
-                onClick={handleCloseModal}
-                className="bg-gray-700 w-full py-2 font-bold hover:bg-gray-800 transition"
-              >
-                Close
-              </button>
-            </div>
-          </div>
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-300">
+    <div className="bg-black text-white shadow-xl p-6 max-w-lg w-full">
+      <div className="flex flex-col items-center">
+        <img
+          src={selectedProduct.image}
+          alt={selectedProduct.name}
+          className="w-full h-64 object-cover mb-4"
+        />
+        <h2 className="text-2xl font-bold text-center mb-2">{selectedProduct.name}</h2>
+        <p className="text-sm text-white text-center mb-4 px-2">{selectedProduct.description}</p>
+
+        <div className="w-full flex flex-col gap-2">
+          <button
+            onClick={handleWhatsAppContact}
+            className="bg-red-600 hover:bg-red-700 transition text-white font-semibold py-2 px-4"
+          >
+            Contact on WhatsApp
+          </button>
+          <button
+            onClick={handleCloseModal}
+            className="bg-white hover:bg-gray-200 transition text-black font-semibold py-2 px-4"
+          >
+            Close
+          </button>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 };
