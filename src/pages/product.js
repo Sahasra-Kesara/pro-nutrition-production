@@ -6,6 +6,13 @@ const creatineProducts = [
   { id: 3, name: "ProScience - Creatine Monohydrate", price: 44.99, image: "https://tse4.mm.bing.net/th/id/OIP.AOya5K4ZeJQ6anqymfPwyQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3", rating: 4.6, popularity: 85 },
   { id: 4, name: "Ultimate Sports Nutrition - Pure Creatine Monohydrate Powder", price: 49.99, image: "https://www.usn.co.za/cdn/shop/files/creatine.webp?v=1728289890&width=480", rating: 4.7, popularity: 88 },
   { id: 5, name: "Applied Nutrition - Creatine Monohydrate", price: 44.99, image: "https://www.beingbuilder.com/image/cache/catalog/Untitled%20design%20-%202023-06-17T191152.793-900x1200.jpg", rating: 4.6, popularity: 85 },
+  { id: 6, name: "Applied Nutrition - Creatine Monohydrate (Flavoured)", price: 44.99, image: "https://www.icebergsupplements.com/wp-content/uploads/2023/02/ga1-1-4.jpg", rating: 4.6, popularity: 85 },
+  { id: 7, name: "Core Champ Creatine", price: 44.99, image: "https://www.bodybuilding.lk/wp-content/uploads/2024/01/Core-Champs-Creatine-1-600x600.jpg", rating: 4.6, popularity: 85 },
+  { id: 8, name: "Muscletech Creatine", price: 44.99, image: "https://drnutrition.com/storage/media/5YzvOfhaNNqyN2l4AhxGYHLKRvcxbP19sBt33gx7.jpg", rating: 4.6, popularity: 85 },
+  { id: 9, name: "Big Ramy Labs - Red Rex Creatine", price: 44.99, image: "https://www.maxmuscleelite.com/web/image/product.template/7437/image_1024?unique=08f53b8", rating: 4.6, popularity: 85 },
+  { id: 10, name: "Inner Armour - Creatine Monohydrate", price: 44.99, image: "https://nutrispothonduras.com/wp-content/uploads/2024/07/Creatina-Inner-400g-v1.jpg", rating: 4.6, popularity: 85 },
+  { id: 11, name: "Skull Labs - Creatine", price: 44.99, image: "https://www.maxmuscleelite.com/web/image/product.product/7868/image_1920/[5902448245737]%20Skull%20Labs%20Creatine%20Monohydrate%20Pharmaceutical%20Grade-66Serv.-300G.-Unflavored?unique=5af16d0", rating: 4.6, popularity: 85 },
+  { id: 12, name: "Ultimate Nutrition - Creatine Monohydrate", price: 44.99, image: "https://nutrishop.pe/wp-content/uploads/2022/05/c5989687-7197-4118-bba1-ae1429580028-1024x1024.jpg", rating: 4.6, popularity: 85 },
 ];
 
 const wheyProducts = [

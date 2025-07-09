@@ -98,36 +98,36 @@ const Creatine = () => {
 
         {/* Modal */}
       {isModalOpen && selectedProduct && (
-  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-start justify-start p-4">
-    <div className="bg-gray-900 p-5 rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md text-center ml-4 mt-10">
-      <img 
-        src={selectedProduct.image} 
-        alt={selectedProduct.name} 
-        className="w-full max-h-48 object-cover rounded-md mb-3" 
-      />
-      <h2 className="text-lg sm:text-xl font-bold">{selectedProduct.name}</h2>
-      {/* <p className="text-red-400 text-md sm:text-lg">${selectedProduct.price.toFixed(2)}</p> */}
-      <p className="text-gray-300 mt-2 text-sm sm:text-base">
-        ⭐ {selectedProduct.rating} | Popularity: {selectedProduct.popularity}%
-      </p>
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-start justify-start p-4">
+          <div className="bg-gray-900 p-5 rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md text-center ml-4 mt-10">
+            <img 
+              src={selectedProduct.image} 
+              alt={selectedProduct.name} 
+              className="w-full max-h-48 object-cover rounded-md mb-3" 
+            />
+            <h2 className="text-lg sm:text-xl font-bold">{selectedProduct.name}</h2>
+            {/* <p className="text-red-400 text-md sm:text-lg">${selectedProduct.price.toFixed(2)}</p> */}
+            <p className="text-gray-300 mt-2 text-sm sm:text-base">
+              ⭐ {selectedProduct.rating} | Popularity: {selectedProduct.popularity}%
+            </p>
 
-      <div className="mt-4 flex flex-col gap-3">
-        <button 
-          onClick={contactOnWhatsApp} 
-          className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white font-bold w-full"
-        >
-          Contact on WhatsApp
-        </button>
-        <button 
-          onClick={closeModal} 
-          className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white font-bold w-full"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+            <div className="mt-4 flex flex-col gap-3">
+              <button 
+                onClick={contactOnWhatsApp} 
+                className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white font-bold w-full"
+              >
+                Contact on WhatsApp
+              </button>
+              <button 
+                onClick={closeModal} 
+                className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white font-bold w-full"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </div>
   );
