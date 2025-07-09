@@ -37,6 +37,7 @@ const wheyProducts = [
   { id: 20, name: "Punisher Whey", price: 45.99, image: "https://www.bangla99.com/image/cache/catalog/product/punisher-whey-protein-5-lbs-700x700w.jpg", rating: 4.5, popularity: 75 },
   { id: 21, name: "Redcon - Isotope Whey", price: 45.99, image: "https://thelipoguy.com.au/wp-content/uploads/2023/09/Choc.jpg", rating: 4.5, popularity: 75 },
   { id: 22, name: "MuscleMeds - Carnivor Beef Protein", price: 45.99, image: "https://a1protein.com/wp-content/uploads/2021/12/MuscleMeds-Carnivor-Beef-Protein-Isolate-Fruit-Punch-1808-gm.jpg", rating: 4.5, popularity: 75 },
+  { id: 23, name: "Kevin Levrone - Gold Whey", price: 45.99, image: "https://fitnesstack.com/wp-content/uploads/2024/03/Kevin-Levrone-Gold-Whey-2kg-New-Pack-1.png", rating: 4.5, popularity: 75 },
 ];
 
 const preWorkoutProducts = [
