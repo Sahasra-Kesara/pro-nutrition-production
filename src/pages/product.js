@@ -32,10 +32,11 @@ const wheyProducts = [
   { id: 15, name: "Flex Wheeler Nutrition Whey Protein", price: 58.99, image: "https://th.bing.com/th/id/R.37958844c74427898a4a017b9f3f72d1?rik=amtwWQVlZBL8Xg&riu=http%3a%2f%2fflexwheelernutrition.com%2fcdn%2fshop%2ffiles%2fFlexWheelerWheyChocolate02_1200x1200.png%3fv%3d1700305829&ehk=YG3Yj6LdxLNluG4ZOd14nygx%2bniTs51PHkNnEE6nU0E%3d&risl=&pid=ImgRaw&r=0", rating: 4.7, popularity: 85 },
   { id: 16, name: "Pole Nutrition Whey Protein - Cookies", price: 49.99, image: "https://5.imimg.com/data5/SELLER/Default/2022/12/GN/JG/KX/149711169/pole-nutrition-whey-protein-500x500.jpg", rating: 4.6, popularity: 80 },
   { id: 17, name: "Monster Labs Whey", price: 45.99, image: "https://res.cloudinary.com/dwf8ifbzs/image/upload/v1741411439/WhatsApp_Image_2025-03-08_at_10.53.40_AM_jj01xn.jpg", rating: 4.5, popularity: 75 },
-  { id: 17, name: "Dymatize ISO 100 Hydrolyzed - 100% Whey Protein", price: 45.99, image: "https://cdn.nutrabay.com/wp-content/uploads/2023/04/NB-DYM-1003-03-01.jpg", rating: 4.5, popularity: 75 },
-  { id: 17, name: "Pro science Whey", price: 45.99, image: "https://jackednutrition.pk/cdn/shop/files/100whey_1200x1364.png?v=1693825156", rating: 4.5, popularity: 75 },
-  { id: 17, name: "Punisher Whey", price: 45.99, image: "https://www.bangla99.com/image/cache/catalog/product/punisher-whey-protein-5-lbs-700x700w.jpg", rating: 4.5, popularity: 75 },
-  { id: 17, name: "Redcon - Isotope Whey", price: 45.99, image: "https://thelipoguy.com.au/wp-content/uploads/2023/09/Choc.jpg", rating: 4.5, popularity: 75 },
+  { id: 18, name: "Dymatize ISO 100 Hydrolyzed - 100% Whey Protein", price: 45.99, image: "https://cdn.nutrabay.com/wp-content/uploads/2023/04/NB-DYM-1003-03-01.jpg", rating: 4.5, popularity: 75 },
+  { id: 19, name: "Pro science Whey", price: 45.99, image: "https://jackednutrition.pk/cdn/shop/files/100whey_1200x1364.png?v=1693825156", rating: 4.5, popularity: 75 },
+  { id: 20, name: "Punisher Whey", price: 45.99, image: "https://www.bangla99.com/image/cache/catalog/product/punisher-whey-protein-5-lbs-700x700w.jpg", rating: 4.5, popularity: 75 },
+  { id: 21, name: "Redcon - Isotope Whey", price: 45.99, image: "https://thelipoguy.com.au/wp-content/uploads/2023/09/Choc.jpg", rating: 4.5, popularity: 75 },
+  { id: 22, name: "MuscleMeds - Carnivor Beef Protein", price: 45.99, image: "https://a1protein.com/wp-content/uploads/2021/12/MuscleMeds-Carnivor-Beef-Protein-Isolate-Fruit-Punch-1808-gm.jpg", rating: 4.5, popularity: 75 },
 ];
 
 const preWorkoutProducts = [
@@ -79,6 +80,7 @@ const lCarnitineProducts = [
   { id: 2, name: "RC - 3000mg", price: 27.99, image: "https://m.media-amazon.com/images/I/51+hxdlQjjL.jpg", rating: 4.7, popularity: 85 },
   { id: 3, name: "Applied Nutrition l-Carnitine", price: 27.99, image: "https://cdn.salla.sa/ZnKl/7og2ea4mrdEZeKktzRY6IlzRkYMNIc8Ne5Svv800.jpg", rating: 4.7, popularity: 85 },
   { id: 4, name: "Nutrex l-Carnitine", price: 27.99, image: "https://vitamins.lv/cdn/shop/products/NutrexLiquidCarni300_CherryLime.jpg?crop=center&height=600&v=1677501878&width=600", rating: 4.7, popularity: 85 },
+  { id: 5, name: "Pole Nutrition - L-Cartine 3000", price: 27.99, image: "https://www.themusclekart.com/cdn/shop/products/Pole-Nutrition-L-Carnitine-Liquid-473-ml-Sour-Apple.jpg?v=1623394327&width=533", rating: 4.7, popularity: 85 },
 ];
 
 const claProducts = [
