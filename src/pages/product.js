@@ -52,6 +52,8 @@ const preWorkoutProducts = [
   { id: 11, name: "Redcon - Total War", price: 49.99, image: "https://m.media-amazon.com/images/I/61mV1JdDFTL.jpg", rating: 4.7, popularity: 85 },
   { id: 12, name: "No - Xplode Pre Workout", price: 49.99, image: "https://www.primeprotein.in/admin/upload/products/Pi7compressedBSN_no_xplode.jpeg", rating: 4.7, popularity: 85 },
   { id: 13, name: "Reckful - The Pump", price: 49.99, image: "https://static.tildacdn.one/tild3862-3465-4631-b463-336338636136/1_pump.png", rating: 4.7, popularity: 85 },
+  { id: 14, name: "The Ripped - Fat Burner", price: 49.99, image: "https://tse2.mm.bing.net/th/id/OIP.HXZZT9muTSbwV5-BYG809QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3", rating: 4.7, popularity: 85 },
+  { id: 15, name: "Yeah Buddy XTreame", price: 49.99, image: "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/700x700/602f0fa2c1f0d1ba5e241f914e856ff9/y/b/ybxtreme_cherrylime_6.jpg", rating: 4.7, popularity: 85 },
 ];
 
 const massGainersProducts = [
@@ -64,10 +66,12 @@ const massGainersProducts = [
   { id: 7, name: "Nuclear Nutrition Atomic Mass Gainer Formula", price: 69.99, image: "https://fasklep.pl/1964-large_default/nuclear-nutrition-atomic-mass-gainer-formula-7-kg.jpg", rating: 4.9, popularity: 94 },
 ];
 
-
 const fatBurnerProducts = [
   { id: 1, name: "Muscle Tech Hydroxy Cut Hardcore", price: 39.99, image: "https://theirongear.com/cdn/shop/products/supplement_3a0f8993-0709-4971-bdcb-3a7e3a9fcbe8.png?v=1668239261", rating: 4.6, popularity: 88 },
   { id: 2, name: "Nutrex Lipo 6", price: 39.99, image: "https://www.xtr.gr/images/detailed/862/01-133-005_nutrex_lipo_6_black_120_web.jpg", rating: 4.6, popularity: 88 },
+  { id: 3, name: "Nutrex Lipo 6 - Hers", price: 39.99, image: "https://tse3.mm.bing.net/th/id/OIP.ffBtndRFGLapD8TsBZyfIQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3", rating: 4.6, popularity: 88 },
+  { id: 4, name: "Core Champs Shred-n-Burn", price: 39.99, image: "https://corechamps.com/cdn/shop/files/Core-Champs-Shred-_-Burn-60-Capsules.png?v=1699435495", rating: 4.6, popularity: 88 },
+  { id: 5, name: "Nutrex CLA 1000", price: 39.99, image: "https://rightnutrition.com.ec/wp-content/uploads/2023/01/Nutrex-CLA-1000-180-Cap.jpg", rating: 4.6, popularity: 88 },
 ];
 
 const lCarnitineProducts = [
