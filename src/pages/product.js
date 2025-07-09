@@ -40,6 +40,9 @@ const wheyProducts = [
   { id: 23, name: "Kevin Levrone - Gold Whey", price: 45.99, image: "https://fitnesstack.com/wp-content/uploads/2024/03/Kevin-Levrone-Gold-Whey-2kg-New-Pack-1.png", rating: 4.5, popularity: 75 },
   { id: 24, name: "Nitrotech whey Gold", price: 45.99, image: "https://th.bing.com/th/id/R.0c1805f82f4ac8979eb4bf07c348acf8?rik=GdOcATfr%2b9kvCg&pid=ImgRaw&r=0", rating: 4.5, popularity: 75 },
   { id: 25, name: "Nitrotech whey Ripped", price: 45.99, image: "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/700x700/602f0fa2c1f0d1ba5e241f914e856ff9/n/i/nitro-tech_ripped_4lbs_chocfudgebrownie_1.jpg", rating: 4.5, popularity: 75 },
+  { id: 26, name: "ISO XP", price: 45.99, image: "https://nutritionalworld.com.pk/wp-content/uploads/2021/03/Iso-Xp-1kg.png", rating: 4.5, popularity: 75 },
+  { id: 27, name: "Applied Nutrition - Vegan Pro", price: 45.99, image: "https://megapump.ie/cdn/shop/products/applied-nutrition-vegan-pro.jpg?v=1655901432", rating: 4.5, popularity: 75 },
+  { id: 28, name: "Applied Nutrition - Beef XP", price: 45.99, image: "https://elitesuppsuk.co.uk/cdn/shop/files/WhatsAppImage2024-01-11at1.09.17PM.jpg?v=1705056965", rating: 4.5, popularity: 75 },
 ];
 
 const preWorkoutProducts = [
@@ -68,6 +71,8 @@ const massGainersProducts = [
   { id: 5, name: "Extream Napalm Mass", price: 49.99, image: "https://cdn.salla.sa/eNzGa/26b0ad38-11e0-4775-9e02-65e1eb2b5b4f-994.0119760479x1000-K4Qb0ALoVQxdWNh743gj4BUU19qFfImODTqC7Hhi.png", rating: 4.6, popularity: 90 },
   { id: 6, name: "Big Ramy Labs Beef Mass", price: 59.99, image: "https://paraflorida.ma/wp-content/uploads/2024/10/Big-Ramy-Beef-Mass-Plus-10-Lbs-Chocolate.jpg", rating: 4.7, popularity: 93 },
   { id: 7, name: "Nuclear Nutrition Atomic Mass Gainer Formula", price: 69.99, image: "https://fasklep.pl/1964-large_default/nuclear-nutrition-atomic-mass-gainer-formula-7-kg.jpg", rating: 4.9, popularity: 94 },
+  { id: 8, name: "Pro Science - Anabolic Mass", price: 69.99, image: "https://fitzone.pk/cdn/shop/files/ProScience_Anabolic_Mass_55_Servings_470x.jpg?v=1740584154", rating: 4.9, popularity: 94 },
+  { id: 9, name: "Swoldier Clean Mass Gainer", price: 69.99, image: "https://warzonelife.com/wp-content/uploads/2023/05/gainer-sqr-1024x1024.png", rating: 4.9, popularity: 94 },
 ];
 
 const fatBurnerProducts = [
