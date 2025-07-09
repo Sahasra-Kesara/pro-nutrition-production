@@ -19,10 +19,9 @@ const categories = [
 const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const selectedProducts = selectedCategory === "All" 
+  const selectedProducts = selectedCategory === "All"
     ? [
         ...creatineProducts, ...wheyProducts, ...preWorkoutProducts, 
         ...fatBurnerProducts, ...lCarnitineProducts, ...claProducts, 
@@ -30,86 +29,89 @@ const Shop = () => {
       ]
     : categories.find(category => category.name === selectedCategory)?.products || [];
 
-  const filteredProducts = selectedProducts
-    .filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredProducts = selectedProducts.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-  // Open Modal Function
   const openModal = (product) => {
     setSelectedProduct(product);
-    setIsModalOpen(true);
   };
 
-  // Close Modal Function
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProduct(null);
-  };
-
-  // WhatsApp Contact Function
-  const contactOnWhatsApp = () => {
+  const handleWhatsAppContact = () => {
     if (!selectedProduct) return;
     const message = `Hello, I am interested in purchasing *${selectedProduct.name}*. Could you provide more details?`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+94765794062&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
-};
-
+  };
+  
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
+  };
 
   return (
     <div className="bg-black min-h-screen text-white flex flex-col md:flex-row">
+      
       {/* Sidebar */}
-      <aside className="w-full md:w-1/4 bg-gray-900 p-6 md:min-h-screen">
-        <h2 className="text-xl font-bold mb-4">Filters</h2>
-        
-        {/* Category Selection */}
-        <h3 className="font-semibold">Categories</h3>
-        <ul className="space-y-2 mt-2">
-          {categories.map((category) => (
-            <li 
-              key={category.name} 
-              className={`cursor-pointer p-2 rounded-md hover:bg-gray-700 ${selectedCategory === category.name ? "bg-red-700" : ""}`}
-              onClick={() => setSelectedCategory(category.name)}
-            >
-              {category.name}
-            </li>
-          ))}
-        </ul>
+      <aside className="w-full md:w-1/4 bg-gray-950 p-6 space-y-6">
+        <h2 className="text-2xl font-bold tracking-wide text-red-500">Filters</h2>
 
-        {/* Search Bar */}
-        <h3 className="font-semibold mt-4">Search</h3>
-        <input 
-          type="text" 
-          placeholder="Search products..." 
-          value={searchTerm} 
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-2 rounded-md mt-2 bg-gray-800 border border-gray-600 text-white"
-        />
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300">Categories</h3>
+          <ul className="space-y-2 mt-3">
+            {categories.map((category) => (
+              <li
+                key={category.name}
+                onClick={() => setSelectedCategory(category.name)}
+                className={`cursor-pointer px-4 py-2 rounded-md border-l-4 transition-all duration-150 ${
+                  selectedCategory === category.name
+                    ? "bg-red-700 border-red-500 text-white"
+                    : "hover:bg-gray-800 border-transparent text-gray-300"
+                }`}
+              >
+                {category.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-gray-300 mt-4">Search</h3>
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full p-2 mt-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder:text-gray-400"
+          />
+        </div>
       </aside>
 
       {/* Product Grid */}
-      <div className="flex-1 p-2 grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+      <div className="flex-1 p-4 grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <div 
-              key={product.id} 
-              className="bg-slate-900 p-4 transform hover:scale-105 transition flex flex-col items-center text-center 
-                         shadow-lg hover:shadow-xl"
-              style={{ height: "360px" }} // Adjusted card height
+            <div
+              key={product.id}
+              className="flex flex-col bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-md p-4 text-center"
             >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full object-cover"
-                style={{ height: "200px", width: "110%" }} // Adjusted image height
-              />
-              <h3 className="text-sm md:text-l font-semibold font-semibold mt-4 text-white">{product.name}</h3>
-              {/* <p className="text-sm sm:text-lg text-red-400">${product.price.toFixed(2)}</p> */}
-              <button 
-                className="mt-auto w-full bg-red-800 py-2 font-bold hover:bg-red-950 transition 
-                           text-white focus:outline-none focus:ring-2 focus:ring-red-500"
-                onClick={() => openModal(product)} // Open modal with the clicked product
-              >
-                View Product
-              </button>
+              <div className="overflow-hidden rounded-md">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full object-cover rounded-md h-[200px] md:h-[240px] lg:h-[260px] xl:h-[280px] transform transition-transform duration-300 hover:scale-110"
+                />
+              </div>
+              <h3 className="text-sm md:text-base font-semibold mt-4 text-white">
+                {product.name}
+              </h3>
+              <div className="mt-auto">
+                <button
+                  className="w-full bg-red-600 hover:bg-red-800 transition py-2 text-sm font-semibold rounded mt-4"
+                  onClick={() => openModal(product)}
+                >
+                  View Product
+                </button>
+              </div>
             </div>
           ))
         ) : (
@@ -118,34 +120,37 @@ const Shop = () => {
       </div>
 
       {/* Modal */}
-      {isModalOpen && selectedProduct && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-slate-900 p-6 rounded-lg max-w-sm w-full">
-            <h2 className="text-xl font-semibold mb-4">{selectedProduct.name}</h2>
-            <img
-              src={selectedProduct.image}
-              alt={selectedProduct.name}
-              className="w-full h-48 object-cover mb-4"
-            />
-            {/* <p className="text-lg text-red-400">${selectedProduct.price.toFixed(2)}</p> */}
-            <p className="text-gray-300 mt-4">{selectedProduct.description}</p>
-            <div className="mt-4 flex justify-between">
-              <button
-                className="bg-red-800 py-2 px-4 font-bold text-white hover:bg-red-950 transition"
-                onClick={contactOnWhatsApp}
-              >
-                Contact on WhatsApp
-              </button>
-              <button
-                className="bg-gray-700 py-2 px-4 font-bold text-white hover:bg-gray-800 transition"
-                onClick={closeModal}
-              >
-                Close
-              </button>
-            </div>
-          </div>
+      {selectedProduct && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-300">
+    <div className="bg-black text-white shadow-xl p-6 max-w-lg w-full">
+      <div className="flex flex-col items-center">
+        <img
+          src={selectedProduct.image}
+          alt={selectedProduct.name}
+          className="w-full h-64 object-cover mb-4"
+        />
+        <h2 className="text-2xl font-bold text-center mb-2">{selectedProduct.name}</h2>
+        <p className="text-sm text-white text-center mb-4 px-2">{selectedProduct.description}</p>
+
+        <div className="w-full flex flex-col gap-2">
+          <button
+            onClick={handleWhatsAppContact}
+            className="bg-red-600 hover:bg-red-700 transition text-white font-semibold py-2 px-4"
+          >
+            Contact on WhatsApp
+          </button>
+          <button
+            onClick={handleCloseModal}
+            className="bg-white hover:bg-gray-200 transition text-black font-semibold py-2 px-4"
+          >
+            Close
+          </button>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

@@ -55,7 +55,7 @@ export default function Footer() {
           <span className="block">Web Design and Developed by StackNet</span>
           {/* White StackNet Logo as a Clickable Button */}
           <a 
-            href="https://stacknet.tech/" 
+            href="https://stacknet.lk/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="mt-4 transition transform hover:scale-110 hover:opacity-80"
