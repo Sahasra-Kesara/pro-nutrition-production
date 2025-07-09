@@ -38,6 +38,8 @@ const wheyProducts = [
   { id: 21, name: "Redcon - Isotope Whey", price: 45.99, image: "https://thelipoguy.com.au/wp-content/uploads/2023/09/Choc.jpg", rating: 4.5, popularity: 75 },
   { id: 22, name: "MuscleMeds - Carnivor Beef Protein", price: 45.99, image: "https://a1protein.com/wp-content/uploads/2021/12/MuscleMeds-Carnivor-Beef-Protein-Isolate-Fruit-Punch-1808-gm.jpg", rating: 4.5, popularity: 75 },
   { id: 23, name: "Kevin Levrone - Gold Whey", price: 45.99, image: "https://fitnesstack.com/wp-content/uploads/2024/03/Kevin-Levrone-Gold-Whey-2kg-New-Pack-1.png", rating: 4.5, popularity: 75 },
+  { id: 24, name: "Nitrotech whey Gold", price: 45.99, image: "https://th.bing.com/th/id/R.0c1805f82f4ac8979eb4bf07c348acf8?rik=GdOcATfr%2b9kvCg&pid=ImgRaw&r=0", rating: 4.5, popularity: 75 },
+  { id: 25, name: "Nitrotech whey Ripped", price: 45.99, image: "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/700x700/602f0fa2c1f0d1ba5e241f914e856ff9/n/i/nitro-tech_ripped_4lbs_chocfudgebrownie_1.jpg", rating: 4.5, popularity: 75 },
 ];
 
 const preWorkoutProducts = [
