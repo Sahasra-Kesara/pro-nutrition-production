@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // Import the specific category data from product.js
 import { massGainersProducts } from "./product"; // Adjust the path based on your file structure
+import { Helmet } from "react-helmet";
 
 const MassGainers = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,6 +44,19 @@ const MassGainers = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+  <title>Buy Mass Gainers in Sri Lanka | Weight Gain Supplements | Pro Nutrition</title>
+  <meta
+    name="description"
+    content="Shop premium quality mass gainer supplements in Sri Lanka at Pro Nutrition. Gain weight and build muscle with high-calorie, protein-rich mass gainers. 100% authentic products."
+  />
+  <meta
+    name="keywords"
+    content="Mass Gainers Sri Lanka, Weight Gain Supplements, Muscle Mass Supplements, Buy Mass Gainer, Pro Nutrition"
+  />
+  <link rel="canonical" href="https://www.pronutrition.lk/mass-gainers" />
+</Helmet>
+
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input

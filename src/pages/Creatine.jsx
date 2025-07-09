@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // Import the specific category data from product.js
 import { creatineProducts } from "./product"; // Adjust the path based on your file structure
+import { Helmet } from "react-helmet";
 
 const Creatine = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,6 +43,12 @@ const Creatine = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+  <title>Buy Creatine Supplements in Sri Lanka | Pro Nutrition</title>
+  <meta name="description" content="Shop high-quality creatine monohydrate, blends, and performance supplements at Pro Nutrition. 100% authentic. Fast delivery in Sri Lanka." />
+  <meta name="keywords" content="Creatine Sri Lanka, Buy Creatine, Muscle Building Supplements, Pro Nutrition, Creatine Monohydrate" />
+  <link rel="canonical" href="https://www.pronutrition.lk/creatine" />
+</Helmet>
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input

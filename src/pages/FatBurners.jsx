@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // Import the specific category data from product.js
 import { fatBurnerProducts } from "./product"; // Adjust the path based on your file structure
+import { Helmet } from "react-helmet";
 
 const FatBurners = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,6 +42,19 @@ const FatBurners = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+  <title>Fat Burners in Sri Lanka | Buy Thermogenic Weight Loss Supplements | Pro Nutrition</title>
+  <meta
+    name="description"
+    content="Shop premium fat burners in Sri Lanka at Pro Nutrition. Discover thermogenics, metabolism boosters, and CLA supplements. 100% genuine products, fast delivery."
+  />
+  <meta
+    name="keywords"
+    content="Fat Burners Sri Lanka, Thermogenic Supplements, CLA Fat Burners, Pro Nutrition, Weight Loss Supplements, Buy Fat Burners Online"
+  />
+  <link rel="canonical" href="https://www.pronutrition.lk/fat-burners" />
+</Helmet>
+
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input

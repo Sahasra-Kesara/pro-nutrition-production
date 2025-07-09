@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // Import the specific category data from product.js
 import { multiVitaminProducts } from "./product"; // Adjust the path based on your file structure
+import { Helmet } from "react-helmet";
 
 const MultiVitamin = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,6 +42,18 @@ const MultiVitamin = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+      <title>Buy Multi-Vitamin Supplements in Sri Lanka | Pro Nutrition</title>
+      <meta
+        name="description"
+        content="Shop high-quality multi-vitamin supplements in Sri Lanka at Pro Nutrition. Boost your health with essential vitamins and minerals. 100% authentic and effective products."
+      />
+      <meta
+        name="keywords"
+        content="Multi-Vitamin Sri Lanka, Vitamin Supplements, Buy Multi-Vitamins, Health Supplements, Pro Nutrition"
+      />
+      <link rel="canonical" href="https://www.pronutrition.lk/multi-vitamin" />
+    </Helmet>
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input

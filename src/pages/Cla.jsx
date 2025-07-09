@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { claProducts } from "./product";
+import { Helmet } from "react-helmet";
 
 const Cla = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,6 +41,19 @@ const Cla = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+      <title>CLA Supplements in Sri Lanka | Pro Nutrition</title>
+      <meta
+        name="description"
+        content="Explore our range of CLA supplements designed for fat loss and fitness. 100% authentic, trusted by athletes in Sri Lanka."
+      />
+      <meta
+        name="keywords"
+        content="CLA Supplements, Fat Burners, Weight Loss, Pro Nutrition Sri Lanka, Buy CLA Sri Lanka"
+      />
+      <link rel="canonical" href="https://www.pronutrition.lk/cla" />
+    </Helmet>
+
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input

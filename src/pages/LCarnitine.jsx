@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // Import the specific category data from product.js
 import { lCarnitineProducts } from "./product"; // Adjust the path based on your file structure
+import { Helmet } from "react-helmet";
 
 const LCarnitine = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,6 +43,19 @@ const LCarnitine = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+  <title>L-Carnitine Supplements in Sri Lanka | Boost Fat Burning | Pro Nutrition</title>
+  <meta
+    name="description"
+    content="Buy premium L-Carnitine supplements in Sri Lanka from Pro Nutrition. Enhance fat metabolism, energy, and endurance with trusted brands. Fast delivery and 100% genuine products."
+  />
+  <meta
+    name="keywords"
+    content="L-Carnitine Sri Lanka, Buy L-Carnitine, Fat Burning Supplements, Weight Loss, Pro Nutrition Supplements, Carnitine Capsules"
+  />
+  <link rel="canonical" href="https://www.pronutrition.lk/l-carnitine" />
+</Helmet>
+
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // Import the specific category data from product.js
 import { preWorkoutProducts } from "./product"; // Adjust the path based on your file structure
+import { Helmet } from "react-helmet";
 
 const PreWorkouts = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,6 +42,18 @@ const PreWorkouts = () => {
 
   return (
     <div className="bg-black min-h-screen text-white py-10">
+    <Helmet>
+      <title>Buy Pre Workout Supplements in Sri Lanka | Pro Nutrition</title>
+      <meta
+        name="description"
+        content="Shop high-quality pre workout supplements in Sri Lanka at Pro Nutrition. Boost your energy and performance with trusted brands. Fast delivery & best prices."
+      />
+      <meta
+        name="keywords"
+        content="Pre Workout Sri Lanka, Pre Workout Supplements, Buy Pre Workout, Energy Supplements, Pro Nutrition"
+      />
+      <link rel="canonical" href="https://www.pronutrition.lk/pre-workout" />
+    </Helmet>
       <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
   <input
