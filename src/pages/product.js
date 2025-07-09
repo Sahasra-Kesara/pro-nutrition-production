@@ -22,16 +22,20 @@ const wheyProducts = [
   { id: 4, name: "Applied Nutrition - Diet Whey Protein - Chocolate", price: 49.99, image: "https://hyjiyastore.b-cdn.net/images/products/applied-nutrition-diet-whey-protein-18-kg-chocolate-dessert-01.jpg", rating: 4.7, popularity: 88 },
   { id: 5, name: "Applied Nutrition - Critical Way Advanced Protein", price: 59.99, image: "https://th.bing.com/th/id/R.09cac2fe9f407758a8575a0f1c778f40?rik=N%2bkxnT9emj%2fM3Q&pid=ImgRaw&r=0", rating: 4.8, popularity: 92 },
   { id: 6, name: "Applied Nutrition - Vegan Pro - Chocolate", price: 55.99, image: "https://th.bing.com/th/id/OIP.9gFmT5pHE4boCuosn2XJvwHaHa?rs=1&pid=ImgDetMain", rating: 4.6, popularity: 84 },
-  { id: 8, name: "Gold Whey - Dennis James - Chocolate Fudge", price: 64.99, image: "https://th.bing.com/th/id/OIP.7_F-NwAcnuZvIbMm7sqLKgHaHa?rs=1&pid=ImgDetMain", rating: 4.8, popularity: 90 },
+  { id: 8, name: "Gold Whey - Dennis James - Chocolate Fudge", price: 64.99, image: "https://cdn.shopify.com/s/files/1/0725/1270/0689/files/DennisJamesWhey03.jpg?v=1682487984", rating: 4.8, popularity: 90 },
   { id: 9, name: "Gibbon Nutrition Whey Protein Isolate & Concentrate - Butter Scotch", price: 62.99, image: "https://brandscrate.com/cdn/shop/products/GibbonWhiteSeriesTheWheyVanilla_1.webp?v=1693828922&width=480", rating: 4.7, popularity: 87 },
   { id: 10, name: "Scitec Nutrition Whey Protein Professional", price: 49.99, image: "https://th.bing.com/th/id/R.3c070ac0f6105182dfbe1574a4342d74?rik=xMQ64HqsWz7I%2bA&riu=http%3a%2f%2fresources.sport-tiedje.com%2fbilder%2fscitec%2fscitec_professional%2fscitec_professional_1_1600.jpg&ehk=zddtUaj61pZ%2bYIG7otc%2fbHzqnWrUGrZKlmNbAJVfahI%3d&risl=&pid=ImgRaw&r=0", rating: 4.6, popularity: 80 },
-  { id: 11, name: "Proscience Whey Anobolic Whey Protein Isolate", price: 54.99, image: "https://www.jnknutrition.com/cdn/shop/products/ProScience-Nutra-Whey-5lbs-Gourmet-Chocolate-web.jpg?v=1663250862", rating: 4.8, popularity: 88 },
+  { id: 11, name: "Proscience Whey Anobolic Whey Protein Isolate", price: 54.99, image: "https://www.myvitaminstore.pk/cdn/shop/files/ProscienceAnabolicWheyProteinIsolate_GourmetChocolate_5Lbs.jpg?v=1724907708", rating: 4.8, popularity: 88 },
   { id: 12, name: "Dexter Jackson Black Series Whey Isolate & Hydrolyzed Protein", price: 65.99, image: "https://m.media-amazon.com/images/I/71Q2MWcWtWL._SL1500_.jpg", rating: 4.9, popularity: 92 },
   { id: 13, name: "Core Champ Whey Protein Ultra-Filter", price: 59.99, image: "https://th.bing.com/th/id/OIP.7OxzPKVMdpqbB2w97QlOowHaHa?rs=1&pid=ImgDetMain", rating: 4.7, popularity: 86 },
   { id: 14, name: "Nuclear Nutrition Isotope Whey Protein Isolate", price: 69.99, image: "https://th.bing.com/th/id/OIP.1_RaiQHC4vlGrMyxGWOm3QAAAA?rs=1&pid=ImgDetMain", rating: 4.9, popularity: 94 },
-  { id: 15, name: "Flex Wheeler Nutrition Whey Protein", price: 58.99, image: "https://th.bing.com/th/id/OIP.pQsHFIl4KeTL14xLq90HSgHaKc?rs=1&pid=ImgDetMain", rating: 4.7, popularity: 85 },
+  { id: 15, name: "Flex Wheeler Nutrition Whey Protein", price: 58.99, image: "https://th.bing.com/th/id/R.37958844c74427898a4a017b9f3f72d1?rik=amtwWQVlZBL8Xg&riu=http%3a%2f%2fflexwheelernutrition.com%2fcdn%2fshop%2ffiles%2fFlexWheelerWheyChocolate02_1200x1200.png%3fv%3d1700305829&ehk=YG3Yj6LdxLNluG4ZOd14nygx%2bniTs51PHkNnEE6nU0E%3d&risl=&pid=ImgRaw&r=0", rating: 4.7, popularity: 85 },
   { id: 16, name: "Pole Nutrition Whey Protein - Cookies", price: 49.99, image: "https://5.imimg.com/data5/SELLER/Default/2022/12/GN/JG/KX/149711169/pole-nutrition-whey-protein-500x500.jpg", rating: 4.6, popularity: 80 },
   { id: 17, name: "Monster Labs Whey", price: 45.99, image: "https://res.cloudinary.com/dwf8ifbzs/image/upload/v1741411439/WhatsApp_Image_2025-03-08_at_10.53.40_AM_jj01xn.jpg", rating: 4.5, popularity: 75 },
+  { id: 17, name: "Dymatize ISO 100 Hydrolyzed - 100% Whey Protein", price: 45.99, image: "https://cdn.nutrabay.com/wp-content/uploads/2023/04/NB-DYM-1003-03-01.jpg", rating: 4.5, popularity: 75 },
+  { id: 17, name: "Pro science Whey", price: 45.99, image: "https://jackednutrition.pk/cdn/shop/files/100whey_1200x1364.png?v=1693825156", rating: 4.5, popularity: 75 },
+  { id: 17, name: "Punisher Whey", price: 45.99, image: "https://www.bangla99.com/image/cache/catalog/product/punisher-whey-protein-5-lbs-700x700w.jpg", rating: 4.5, popularity: 75 },
+  { id: 17, name: "Redcon - Isotope Whey", price: 45.99, image: "https://thelipoguy.com.au/wp-content/uploads/2023/09/Choc.jpg", rating: 4.5, popularity: 75 },
 ];
 
 const preWorkoutProducts = [
