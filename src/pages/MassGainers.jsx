@@ -101,34 +101,34 @@ const MassGainers = () => {
 
       {/* Modal */}
       {selectedProduct && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-300">
-    <div className="bg-black text-white shadow-xl p-6 max-w-lg w-full">
-      <div className="flex flex-col items-center">
-        <img
-          src={selectedProduct.image}
-          alt={selectedProduct.name}
-          className="w-full h-64 object-cover mb-4"
-        />
-        <h2 className="text-2xl font-bold text-center mb-2">{selectedProduct.name}</h2>
-        <p className="text-sm text-white text-center mb-4 px-2">{selectedProduct.description}</p>
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+  <div className="bg-gray-950 border border-red-600 text-white rounded-xl shadow-lg p-6 max-w-md w-full mx-4">
+    <div className="flex flex-col items-center">
+      <img
+        src={selectedProduct.image}
+        alt={selectedProduct.name}
+        className="w-full h-64 object-cover rounded-md border border-gray-800 mb-4"
+      />
+      <h2 className="text-2xl font-bold uppercase text-red-500 text-center">{selectedProduct.name}</h2>
+      <p className="text-white text-sm text-center mt-2 mb-6">{selectedProduct.description}</p>
 
-        <div className="w-full flex flex-col gap-2">
-          <button
-            onClick={handleWhatsAppContact}
-            className="bg-red-600 hover:bg-red-700 transition text-white font-semibold py-2 px-4"
-          >
-            Contact on WhatsApp
-          </button>
-          <button
-            onClick={handleCloseModal}
-            className="bg-white hover:bg-gray-200 transition text-black font-semibold py-2 px-4"
-          >
-            Close
-          </button>
-        </div>
+      <div className="w-full flex flex-col gap-3">
+        <button
+          onClick={handleWhatsAppContact}
+          className="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-md transition"
+        >
+          Contact on WhatsApp
+        </button>
+        <button
+          onClick={handleCloseModal}
+          className="bg-white hover:bg-gray-200 text-black font-semibold py-2 px-4 rounded-md transition"
+        >
+          Close
+        </button>
       </div>
     </div>
   </div>
+</div>
 )}
 
 

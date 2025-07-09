@@ -11,14 +11,16 @@ const BestSellers = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const openModal = (product) => setSelectedProduct(product);
-  const closeModal = () => setSelectedProduct(null);
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
+  };
 
-  const contactOnWhatsApp = () => {
+  const handleWhatsAppContact = () => {
     if (!selectedProduct) return;
     const message = `Hello, I am interested in purchasing *${selectedProduct.name}*. Could you provide more details?`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=+94765794062&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
-};
+  };
 
 
   return (
@@ -27,31 +29,35 @@ const BestSellers = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 uppercase">Best Sellers</h2>
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
   {bestSellers.map((product) => (
     <div
       key={product.id}
-      className="bg-slate-900 p-2 md:p-4 shadow-lg flex flex-col items-center text-center"
-      style={{ height: "360px", maxWidth: "100%" }} // Smaller card height in mobile
+      className="flex flex-col bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-md p-4 text-center"
+      style={{ height: "auto", maxWidth: "100%" }}
     >
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full object-cover"
-        style={{ height: "220px" }} // Smaller image in mobile
-      />
-      <h3 className="text-sm md:text-lg font-semibold mt-2 text-white">{product.name}</h3>
-      {/* <p className="text-xs md:text-lg text-red-400">${product.price.toFixed(2)}</p> */}
-      <button
-        onClick={() => openModal(product)}
-        className="mt-auto w-full bg-red-800 py-1 md:py-2 text-xs md:text-base text-white font-bold hover:bg-red-950 transition"
-      >
-        View Product
-      </button>
+      <div className="overflow-hidden rounded-md">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full object-cover rounded-md h-[200px] md:h-[240px] lg:h-[260px] xl:h-[280px] transform transition-transform duration-300 hover:scale-110"
+        />
+      </div>
+
+      <h3 className="text-sm md:text-base font-semibold mt-4 text-white">{product.name}</h3>
+
+      <div className="mt-auto">
+        <button
+          className="w-full bg-red-600 hover:bg-red-800 transition py-2 text-sm font-semibold rounded mt-4"
+          onClick={() => openModal(product)}
+        >
+          View Product
+        </button>
+      </div>
     </div>
-    
   ))}
 </div>
+
 
 
         {/* Find More Button */}
@@ -63,36 +69,35 @@ const BestSellers = () => {
       </div>
 
       {/* Left-Aligned Mobile-Optimized Modal */}
-{selectedProduct && (
-  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-start justify-start p-4 mb-10">
-    <div className="bg-gray-900 p-5 rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md text-center ml-4 mt-10">
-      <img 
-        src={selectedProduct.image} 
-        alt={selectedProduct.name} 
-        className="w-full max-h-48 object-cover rounded-md mb-3" 
+      {selectedProduct && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+  <div className="bg-gray-950 border border-red-600 text-white rounded-xl shadow-lg p-6 max-w-md w-full mx-4">
+    <div className="flex flex-col items-center">
+      <img
+        src={selectedProduct.image}
+        alt={selectedProduct.name}
+        className="w-full h-64 object-cover rounded-md border border-gray-800 mb-4"
       />
-      <h2 className="text-lg sm:text-xl font-bold">{selectedProduct.name}</h2>
-      {/* <p className="text-red-400 text-md sm:text-lg">${selectedProduct.price.toFixed(2)}</p> */}
-      <p className="text-gray-300 mt-2 text-sm sm:text-base">
-        ⭐ {selectedProduct.rating} | Popularity: {selectedProduct.popularity}%
-      </p>
+      <h2 className="text-2xl font-bold uppercase text-red-500 text-center">{selectedProduct.name}</h2>
+      <p className="text-white text-sm text-center mt-2 mb-6">{selectedProduct.description}</p>
 
-      <div className="mt-4 flex flex-col gap-3">
-        <button 
-          onClick={contactOnWhatsApp} 
-          className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white font-bold w-full"
+      <div className="w-full flex flex-col gap-3">
+        <button
+          onClick={handleWhatsAppContact}
+          className="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-md transition"
         >
           Contact on WhatsApp
         </button>
-        <button 
-          onClick={closeModal} 
-          className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-white font-bold w-full"
+        <button
+          onClick={handleCloseModal}
+          className="bg-white hover:bg-gray-200 text-black font-semibold py-2 px-4 rounded-md transition"
         >
           Close
         </button>
       </div>
     </div>
   </div>
+</div>
 )}
 {/* Video Background Section */}
 <section className="relative w-full h-[400px] flex items-center justify-center">

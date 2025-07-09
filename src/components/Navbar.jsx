@@ -8,7 +8,8 @@ export default function Navbar() {
 
   const categories = useMemo(
     () => [
-      { name: "Shop", path: "/" },
+      { name: "Home", path: "/" },
+      { name: "Shop", path: "/shop" },
       { name: "Creatine", path: "/creatine" },
       { name: "Whey Proteins", path: "/whey-proteins" },
       { name: "Mass Gainers", path: "/mass-gainers" },
